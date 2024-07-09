@@ -1,11 +1,12 @@
 const express = require('express')
 const { randomBytes } = require('crypto')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 
 const app = express();
 
-
 app.use(bodyParser.json());
+app.use(cors()); // Enables CORS for ExpressJS server, allowing it to accept cross-origin requests. By default, it allows requests from any origin.
 
 const posts = {};
 
